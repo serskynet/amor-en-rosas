@@ -1,0 +1,144 @@
+/* === Estilos para los modelos 3D === */
+
+/* Contenedor principal de los modelos */
+.model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que bajen en pantallas pequeñas */
+    gap: 20px; /* Separación entre modelos */
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    border-radius: 12px;
+    max-width: 1200px;
+  }
+  
+  /* Cada model-viewer individual */
+  model-viewer {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(145deg, #ffffff, #dddddd);
+    border-radius: 16px;
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      0 4px 8px rgba(0, 0, 0, 0.15),
+      inset 0 2px 6px rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover para mejorar interactividad */
+  model-viewer:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0 12px 24px rgba(0, 0, 0, 0.3),
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 3px 8px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* === Estilos para Modo Oscuro === */
+  @media (prefers-color-scheme: dark) {
+    .model-container {
+      background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+    }
+  
+    model-viewer {
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      box-shadow:
+        0 6px 12px rgba(255, 255, 255, 0.1),
+        0 12px 24px rgba(255, 255, 255, 0.08),
+        inset 0 2px 4px rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    model-viewer:hover {
+      box-shadow:
+        0 10px 20px rgba(255, 255, 255, 0.15),
+        0 20px 40px rgba(255, 255, 255, 0.1),
+        inset 0 2px 6px rgba(0, 0, 0, 0.8);
+      transform: scale(1.07);
+    }
+  }
+  
+  
+@media (max-width: 991px) {
+  nav {
+      width: 200px;
+  }
+
+  .contenido {
+      margin-left: 200px;
+      padding: 30px;
+  }
+
+  header h1 {
+      font-size: 2.2rem;
+  }
+
+  main p {
+      font-size: 1rem;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+  nav {
+      position: fixed;
+      width: 100%;
+      height: auto;
+      top: 0;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 10px 0;
+  }
+
+  nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0;
+  }
+
+  nav ul li {
+      margin: 0 10px;
+  }
+
+  .logo {
+      display: none;
+  }
+
+  .contenido {
+      margin: 100px 0 0 0;
+      padding: 20px;
+  }
+
+  header h1 {
+      font-size: 1.8rem;
+  }
+
+  main p {
+      font-size: 1rem;
+      padding: 0 15px;
+  }
+
+  footer {
+      width: 90%;
+      padding: 20px;
+  }
+}
+
+/* Extra pequeño (modo super móvil) */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.5rem;
+  }
+
+  main p {
+      font-size: 0.9rem;
+  }
+
+  nav ul li a {
+      padding: 8px 10px;
+      font-size: 0.85rem;
+  }
+}

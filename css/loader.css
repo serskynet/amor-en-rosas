@@ -1,0 +1,102 @@
+/* Estilos para el loader */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Ocultar el loader después de cargar */
+.loader-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 991px) {
+    nav {
+        width: 200px;
+    }
+
+    .contenido {
+        margin-left: 200px;
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+
+/* Para celulares */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        top: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .contenido {
+        margin: 100px 0 0 0;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    footer {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Extra pequeño (modo super móvil) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
